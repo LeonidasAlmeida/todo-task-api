@@ -26,8 +26,8 @@ connectDB()
 app.get('/test',(req,res)=>utilResponse(res,200,true,'Welcome to task api test'))
 // all router
 // user router
-app.use('/api/user',require('./src/router/userRouter'))
+app.use('/api/user', require('./src/router/userRouter'))
 // task router
-app.use('/api/task',require('./src/router/taskRouter'))
+app.use('/api/task', require('./src/router/taskRouter'))
 //listen
 app.listen(PORT,()=>console.log(`Connect to server on port ${PORT}`.white.bgYellow))
