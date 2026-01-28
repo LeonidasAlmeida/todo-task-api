@@ -14,7 +14,6 @@ dotenv.config()
 const PORT = process.env.PORT || 8080
 //app
 const app = express()
-
 //middleware
 app.use(express.json())
 app.use(cors())
@@ -24,7 +23,6 @@ app.use(errorMiddleware)
 connectDB()
 //test router
 app.get('/test',(req,res)=>utilResponse(res,200,true,'Welcome to task api test'))
-// all router
 // user router
 app.use('/api/user', require('./src/router/userRouter'))
 // task router
