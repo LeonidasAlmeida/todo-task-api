@@ -56,7 +56,11 @@ const updateUserController = async (req, res)=>{
 //delete user controller
 const deleteUserController = async (req, res)=>{
       try {
-        
+         // get id
+        const {id} = req.params
+        if(!id){return utilResponse(res,400,false,'BAD_REQUEST')}
+        await userModel.findByIdAndDelete(id)
+        utilResponse(res,200,true,'success delete')
     } catch (error) {
        console.log(error)
        utilResponse(res,500,false,'Internal Error API createUserControlller',error) 
