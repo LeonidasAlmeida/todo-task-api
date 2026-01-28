@@ -3,7 +3,7 @@ const colors = require('colors')
 const morgan = require('morgan')
 const dotenv = require('dotenv')
 const cors = require('cors')
-const connectDB = require('../food-app/config/db')
+const connectDB = require('./src/config/db')
 const errorMiddleware = require('./src/middleware/errorMiddleware')
 const { utilResponse } = require('./src/utils/resResponse')
 
